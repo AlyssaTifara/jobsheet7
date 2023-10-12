@@ -8,7 +8,7 @@ public class WhileGaji03 {
         gajiLembur = 0;
         totalGajiLembur = 0;
 
-        System.out.print("Masukkan jumlah karyawan");
+        System.out.print("Masukkan jumlah karyawan:");
         jumlahKaryawan = scan.nextInt();
 
         int i = 0;
@@ -26,6 +26,10 @@ public class WhileGaji03 {
                 gajiLembur = jumlahJamLembur * 100000;
             } else if (jabatan.equalsIgnoreCase("karyawan")) {
                 gajiLembur = jumlahJamLembur *75000;
+            } else {
+                i -= 1;
+                System.out.println("Jabatan invalid");
+                continue;
             }
             totalGajiLembur += gajiLembur;
         }
